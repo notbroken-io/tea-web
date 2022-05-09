@@ -1,0 +1,73 @@
+@import "@/assets/css/colors.scss";
+@import "@/assets/css/typography.scss";
+@import "@/assets/css/responsive.scss";
+
+$z-index: (
+  modal: 10,
+  select: 20,
+  tooltip: 20,
+  datepicker: 20,
+  dropdown: 20,
+  loader: 40,
+  toast: 50,
+);
+
+$borderRadius: 4px;
+$baseline: 8px;
+
+// fonf-size, line-height, font-family
+$fontLogo: $typographyWeightBold 7.4rem $typographyFamilyLogo;
+$fontTitle: $typographyWeightBold 7.4rem $typographyFamilyHeader;
+$fontSubtitle: $typographyWeightBold 7.4rem $typographyFamilyHeader;
+$fontText: $typographyWeightMedium 1.6rem $typographyFamilyText;
+
+// Export for the other sccs
+:export {
+  baseline: $baseline;
+  borderRadius: $borderRadius;
+
+  fontLogo: $fontLogo;  
+  fontTitle: $fontTitle;  
+  fontSubtitle: $fontSubtitle;  
+  fontText: $fontText;  
+}
+
+// ---------------------------------------------------
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// The index HTML - General formatation
+#root {
+  font-size: 60%;
+  background-color: $textBaseColor;
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body,
+input,
+button,
+textarea {
+  font: $fontText;
+  color: $lineWhiteColor;
+}
+
+button {
+  background-color: $textTitleColor;
+  border: none;
+  border-radius: 5%;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
